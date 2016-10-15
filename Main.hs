@@ -23,3 +23,4 @@ splitLines cs = let (pre,suf) = break isLineTerminator cs
     _                -> []
 
 isLineTerminator c = c == '\r' || c == '\n'
+
