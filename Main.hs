@@ -1,15 +1,15 @@
 import System.Environment (getArgs)
 
-main = do 
+main = do
   args <- getArgs
   case args of
     [inp,out] -> interactWith fixLines inp out
     _         -> putStrLn "error: exactly 2 args required"
-    
+
 interactWith f inpf outf = do
   input <- readFile inpf
   writeFile outf (f input)
-  
+
 fixLines :: String -> String
 fixLines cs = unlines (splitLines cs)
 
